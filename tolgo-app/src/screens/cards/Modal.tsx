@@ -1,13 +1,14 @@
-import React from "react";
+
+import React,{ useState } from "react";
 import Card from "../../components/ux/card";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { IoMdRemoveCircle, IoMdAddCircle } from "react-icons/io";
 
-const Dashboard = (props) => {
+export const Modal = ({showModal,setShowModal}) => {
   return (
+    showModal?
     <div>
       <div>
-      <h1 className="font-extrabold text-xl">Accueil</h1>
       </div>
       <div className="">
         <div className="flex">
@@ -18,7 +19,7 @@ const Dashboard = (props) => {
               owner="Houdiya Ndiath"
               type="Carte multiusage"
               expireOn="11/23"
-              isLocked={true}
+              isLocked={false}
               cvv="112"
 
             />
@@ -129,7 +130,6 @@ const Dashboard = (props) => {
         </div>
       </div>
     </div>
+    :null
   );
 };
-
-export default Dashboard;

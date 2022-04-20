@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .center-item {
+    @apply flex justify-center items-center;
+  }
+
+  .sidebar-item {
+    @apply flex items-center p-2 rounded-lg group hover:bg-white hover:shadow-lg hover:border-transparent flex-shrink m-2 transition-all ease-linear duration-300;
+  }
+}
+
+html,
+body,
+#root {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+}
